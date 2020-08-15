@@ -39,17 +39,18 @@ Copy the markdown below and paste it in your Github Readme.
 # Options
 | Options 	| default    	| Available            	|
 |---------	|------------	|----------------------	|
-| type    	| horizontal 	| horizontal, vertical 	|
+| type    	| vertical 	| horizontal, vertical 	|
 
 ## Demo
-### Horizontal
-> You don't need to add **?type=horizontal** parameter, as it's default option.
-
-[![readme Quotes](https://quotes-github-readme.vercel.app/api)](https://github.com/piyushsuthar/github-readme-quotes)
 ### Vertical
-> You need to add **?type=vertical** parameter.
+> You don't need to add **?type=vertical** parameter.
 
 [![readme Quotes](https://quotes-github-readme.vercel.app/api?type=vertical)](https://github.com/piyushsuthar/github-readme-quotes)
+
+### Horizontal
+> You need to add **?type=horizontal** parameter.
+
+[![readme Quotes](https://quotes-github-readme.vercel.app/api)](https://github.com/piyushsuthar/github-readme-quotes)
 
 # Author 🤗
 
