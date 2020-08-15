@@ -1,5 +1,5 @@
 <p align="center">
-  <img align="center" src=''>
+  <img align="center" width="100" src='https://cdn.statically.io/gh/PiyushSuthar/github-readme-quotes/4b27602b/logo.png'/>
   <h1 align="center">Github Readme Quotes</h1>
   <p align="center">Developer Quotes for your Github Readme.</p>
 </p>
