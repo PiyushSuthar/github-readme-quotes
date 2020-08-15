@@ -15,7 +15,7 @@
   </a>
 </p>
 <p align="center">
-  <a href="https://toolzar.netlify.app" target="_blank">
+  <a href="https://https://quotes-github-readme.vercel.app/api" target="_blank">
     View Demo
   </a>
  · 
@@ -52,6 +52,11 @@ Copy the markdown below and paste it in your Github Readme.
 # Contributing 🤝
 
 Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/PiyushSuthar/github-readme-quotes/issues). 
+
+# Special Thanks ❤
+Inspired from [AnuragHazra/github-readme-stats](https://github.com/anuraghazra/github-readme-stats).
+
+[skolakoda/programming-quotes-api](https://github.com/skolakoda/programming-quotes-api) for Quotes API.
 
 # Show your support 🌈
 
