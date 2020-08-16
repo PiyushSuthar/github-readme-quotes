@@ -5,6 +5,6 @@ module.exports = async (req,res)=>{
     const {type} = req.query
     var data = await fetchQuotes()
     res.setHeader("Content-Type", "image/svg+xml")
-    res.setHeader("Cache-Control", `public, max-age=1800`);
+    res.setHeader("Cache-Control", `public, max-age=600`);
     res.send(renderSVG(data, type))
 }
