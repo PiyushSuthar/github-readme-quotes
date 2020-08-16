@@ -15,7 +15,7 @@
   </a>
 </p>
 <p align="center">
-  <a href="https://https://quotes-github-readme.vercel.app/api" target="_blank">
+  <a href="https://quotes-github-readme.vercel.app/api" target="_blank">
     View Demo
   </a>
  · 
