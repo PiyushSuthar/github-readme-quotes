@@ -10,9 +10,9 @@ const axios = require('axios').default
 // Using JSON directly from GitHub Repo.
 async function fetchQuotes() {
     const response = await axios.get('https://raw.githubusercontent.com/skolakoda/programming-quotes-api/master/backup/quotes.json')
+    const data = response.data
 //     Randomly Selecting Quote from Array
-    const data = response.data[Math.floor(Math.random() * (json.length + 1))]
-    return parseData(data)
+    return parseData(data[Math.floor(Math.random() * (data.length + 1))])
 }
 
 const parseData = (data) => {
