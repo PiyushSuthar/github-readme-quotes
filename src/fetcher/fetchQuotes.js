@@ -11,8 +11,14 @@ const axios = require('axios').default
 async function fetchQuotes() {
     const response = await axios.get('https://raw.githubusercontent.com/skolakoda/programming-quotes-api/master/backup/quotes.json')
     const data = response.data
-//     Randomly Selecting Quote from Array
-    return parseData(data[Math.floor(Math.random() * (data.length + 1))])
+    //     Randomly Selecting Quote from Array
+    return checkLength(data)
+}
+
+async function checkLength(data) {
+    let quote = parseData(data[Math.floor(Math.random() * (data.length + 1))])
+
+    return quote.quote.length > 150 ? quote : checkLength(data)
 }
 
 const parseData = (data) => {
