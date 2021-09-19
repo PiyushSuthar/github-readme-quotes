@@ -40,6 +40,8 @@ Copy the markdown below and paste it in your Github Readme.
 | Options 	| default    	| Available            	|
 |---------	|------------	|----------------------	|
 | type    	| vertical 	| horizontal, vertical 	|
+|---------	|------------	|----------------------	|
+| theme    	| light 	| light, dark 	|
 
 ## Demo
 ### Vertical
