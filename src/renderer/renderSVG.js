@@ -4,8 +4,6 @@ const renderTheme = require('./theme/awesomeCard');
 
 const renderSVG = (data,type,theme) => {
     const { quote, author } = data
-    console.log(theme)
-    console.log(type)
     switch (theme) {
       case "dark":
         color = renderTheme("dark")
