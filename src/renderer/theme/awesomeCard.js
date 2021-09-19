@@ -1,15 +1,22 @@
 const renderTheme = (theme) => {
     if (theme == "dark"){
-      const renderedTheme = {
+      let renderedTheme = {
         text: "white",
         background: "black"
       }
+      return renderedTheme
     }else if (theme == "light"){
-      const renderedTheme = {
+      let renderedTheme = {
         text: "black",
         background: "white"
       }
+      return renderedTheme
+    }else{
+      let renderedTheme = {
+        text: "black",
+        background: "white"
+      }
+      return renderedTheme
     }
-    return renderedTheme
 }
 module.exports = renderTheme
