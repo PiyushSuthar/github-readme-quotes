@@ -1,5 +1,5 @@
-const fetchQuotes = require('/home/runner/GitHub-README-Quotes/src/fetcher/fetchQuotes')
-const renderSVG = require('/home/runner/GitHub-README-Quotes/src/renderer/renderSVG')
+const fetchQuotes = require('../src/fetcher/fetchQuotes')
+const renderSVG = require('../src/renderer/renderSVG')
 
 module.exports = async (req,res)=>{
     const {type} = req.query
