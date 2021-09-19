@@ -1,8 +1,18 @@
 const renderHorizontal = require('./type/horizontalCard');
 const renderVertical = require('./type/verticalCard');
+const renderTheme = require('./theme/awesomeCard');
 
 const renderSVG = (data,type) => {
     const { quote, author } = data
+    switch (type) {
+      case "dark":
+        color = renderTheme("dark")
+      case "light":
+        color = renderTheme("light")
+      default:
+        color = renderTheme("light")
+    }
+    console.log(color)
     switch (type) {
       case "vertical":
         return renderVertical({quote,author})
