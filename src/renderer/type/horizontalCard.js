@@ -1,4 +1,4 @@
-const renderHorizontal = ({quote,author}) => {
+const renderHorizontal = ({quote,author, color}) => {
     const renderedSVG = `<svg width="600" height="auto" fill="none" xmlns="http://www.w3.org/2000/svg">
     <foreignObject width="100%" height="100%">
         <div xmlns="http://www.w3.org/1999/xhtml">
@@ -12,7 +12,7 @@ const renderHorizontal = ({quote,author}) => {
                 font-family: Arial, Helvetica, sans-serif;
                 padding: 20px;
                 width: 600px;
-                background-color: white;
+                background-color: ${color.background};
                 border: 1px solid rgba(0, 0, 0, 0.2);
                 border-radius: 10px;
                 }
@@ -21,6 +21,7 @@ const renderHorizontal = ({quote,author}) => {
                 margin-bottom: 5px;
                 font-weight: 500;
                 font-style: oblique;
+                color: ${color.text};
                 }
                 .container h3::before {
                 content: open-quote;
@@ -37,7 +38,7 @@ const renderHorizontal = ({quote,author}) => {
                 font-style: italic;
                 padding: 5px;
                 text-align: right;
-                color: rgba(0,0,0,0.6)
+                color: ${color.text};
                 }
             </style>
             <div class="container">

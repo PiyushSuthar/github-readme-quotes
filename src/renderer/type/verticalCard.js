@@ -1,4 +1,4 @@
-const renderVertical = ({quote, author})=>{
+const renderVertical = ({quote, author, color})=>{
     
     const renderedSVG = `<svg width="300" height="300" fill="none" xmlns="http://www.w3.org/2000/svg">
     <foreignObject width="100%" height="100%">
@@ -12,7 +12,7 @@ const renderVertical = ({quote, author})=>{
   .container{
     width: 300px;
     height: 300px;
-    background-color: white;
+    background-color: ${color.background};
   font-family: Arial, Helvetica, sans-serif;
     padding: 15px;
     display:flex;
@@ -38,9 +38,11 @@ const renderVertical = ({quote, author})=>{
   }
   .container h3{
     margin-bottom: 15px;
+    color: ${color.text};
   }
   .container p{
     font-style: italic;
+    color: ${color.text};
   }
   </style>
   <div class="container">
