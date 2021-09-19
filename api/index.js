@@ -1,5 +1,5 @@
-const fetchQuotes = require('../src/fetcher/fetchQuotes')
-const renderSVG = require('../src/renderer/renderSVG')
+const fetchQuotes = require('/home/runner/GitHub-README-Quotes/src/fetcher/fetchQuotes')
+const renderSVG = require('/home/runner/GitHub-README-Quotes/src/renderer/renderSVG')
 
 module.exports = async (req,res)=>{
     const {type} = req.query
@@ -8,4 +8,4 @@ module.exports = async (req,res)=>{
     res.setHeader("Content-Type", "image/svg+xml")
     res.setHeader("Cache-Control", `public, max-age=600`);
     res.send(renderSVG(data, type, theme))
-}
+})
