@@ -38,11 +38,11 @@ const renderVertical = ({quote, author, color})=>{
   }
   .container h3{
     margin-bottom: 15px;
-    color: ${color.text};
+    color: ${color.quote};
   }
   .container p{
     font-style: italic;
-    color: ${color.text};
+    color: ${color.author};
   }
   </style>
   <div class="container">
