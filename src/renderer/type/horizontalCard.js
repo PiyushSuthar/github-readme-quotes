@@ -21,7 +21,7 @@ const renderHorizontal = ({quote,author, color}) => {
                 margin-bottom: 5px;
                 font-weight: 500;
                 font-style: oblique;
-                color: ${color.text};
+                color: ${color.quote};
                 }
                 .container h3::before {
                 content: open-quote;
@@ -38,7 +38,7 @@ const renderHorizontal = ({quote,author, color}) => {
                 font-style: italic;
                 padding: 5px;
                 text-align: right;
-                color: ${color.text};
+                color: ${color.author};
                 }
             </style>
             <div class="container">
