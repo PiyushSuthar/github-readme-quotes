@@ -25,9 +25,11 @@ const renderVertical = ({quote, author, color})=>{
   }
   .container h3::before{
     content: open-quote;
+    color: #${color.symbol};
   }
   .container h3::after{
     content: close-quote;
+    color: #${color.symbol};
   }
   .container h3::before, .container h3::after{
     font-size: 50px;
