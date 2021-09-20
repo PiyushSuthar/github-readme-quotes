@@ -18,10 +18,13 @@ const renderSVG = (data,type,theme) => {
     switch (type) {
       case "vertical":
         return renderVertical({quote,author,color})
+        break; 
       case "horizontal":
         return renderHorizontal({quote,author,color})
+        break; 
       default:
         return renderVertical({quote,author,color})
+        break; 
     }
 }
 
