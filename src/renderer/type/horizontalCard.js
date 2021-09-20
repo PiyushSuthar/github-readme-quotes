@@ -26,11 +26,13 @@ const renderHorizontal = ({quote,author, color}) => {
                 .container h3::before {
                 content: open-quote;
                 font-size: 25px;
+                color: #${color.symbol};
                 }
                 .container h3::after {
                 content: close-quote;
                 vertical-align: sub;
                 font-size: 25px;
+                color: #${color.symbol};
                 }
                 .container p {
                 /* float: right; */
