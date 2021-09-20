@@ -1,19 +1,22 @@
 const renderTheme = (theme) => {
     if (theme == "dark"){
       let renderedTheme = {
-        text: "white",
+        quote: "white",
+        author: "white",
         background: "black"
       }
       return renderedTheme
     }else if (theme == "light"){
       let renderedTheme = {
-        text: "black",
+        quote: "black",
+        author: "black",
         background: "white"
       }
       return renderedTheme
     }else{
       let renderedTheme = {
-        text: "black",
+        quote: "black",
+        author: "black",
         background: "white"
       }
       return renderedTheme
