@@ -12,7 +12,7 @@ const renderHorizontal = ({quote,author, color}) => {
                 font-family: Arial, Helvetica, sans-serif;
                 padding: 20px;
                 width: 600px;
-                background-color: ${color.background};
+                background-color: #${color.background};
                 border: 1px solid rgba(0, 0, 0, 0.2);
                 border-radius: 10px;
                 }
@@ -21,7 +21,7 @@ const renderHorizontal = ({quote,author, color}) => {
                 margin-bottom: 5px;
                 font-weight: 500;
                 font-style: oblique;
-                color: ${color.quote};
+                color: #${color.quote};
                 }
                 .container h3::before {
                 content: open-quote;
@@ -38,7 +38,7 @@ const renderHorizontal = ({quote,author, color}) => {
                 font-style: italic;
                 padding: 5px;
                 text-align: right;
-                color: ${color.author};
+                color: #${color.author};
                 }
             </style>
             <div class="container">
