@@ -12,7 +12,7 @@ const renderVertical = ({quote, author, color})=>{
   .container{
     width: 300px;
     height: 300px;
-    background-color: ${color.background};
+    background-color: #${color.background};
   font-family: Arial, Helvetica, sans-serif;
     padding: 15px;
     display:flex;
@@ -38,11 +38,11 @@ const renderVertical = ({quote, author, color})=>{
   }
   .container h3{
     margin-bottom: 15px;
-    color: ${color.quote};
+    color: #${color.quote};
   }
   .container p{
     font-style: italic;
-    color: ${color.author};
+    color: #${color.author};
   }
   </style>
   <div class="container">
