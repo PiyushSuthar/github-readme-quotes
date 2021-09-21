@@ -12,7 +12,7 @@ const renderVertical = ({quote, author, color})=>{
   .container{
     width: 300px;
     height: 300px;
-    background-color: ${color.background};
+    background-color: #${color.background};
   font-family: Arial, Helvetica, sans-serif;
     padding: 15px;
     display:flex;
@@ -25,9 +25,11 @@ const renderVertical = ({quote, author, color})=>{
   }
   .container h3::before{
     content: open-quote;
+    color: #${color.symbol};
   }
   .container h3::after{
     content: close-quote;
+    color: #${color.symbol};
   }
   .container h3::before, .container h3::after{
     font-size: 50px;
@@ -38,11 +40,11 @@ const renderVertical = ({quote, author, color})=>{
   }
   .container h3{
     margin-bottom: 15px;
-    color: ${color.text};
+    color: #${color.quote};
   }
   .container p{
     font-style: italic;
-    color: ${color.text};
+    color: #${color.author};
   }
   </style>
   <div class="container">

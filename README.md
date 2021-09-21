@@ -34,13 +34,13 @@
 # Usage ⚡️
 Copy the markdown below and paste it in your Github Readme.
 ```md
-[![Readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal)](https://github.com/piyushsuthar/github-readme-quotes)
+[![Readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)](https://github.com/piyushsuthar/github-readme-quotes)
 ```
 # Options
 | Options 	| default    	| Available            	|
 |---------	|------------	|----------------------	|
 | type    	| vertical 	| horizontal, vertical 	|
-| theme    	| light 	| light, dark 	|
+| theme    	| light 	| dark, radical, merko, gruvbox, tokyonight	|
 
 ## Demo
 ### Vertical
@@ -52,6 +52,16 @@ Copy the markdown below and paste it in your Github Readme.
 > You need to add **?type=horizontal** parameter.
 
 [![readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal)](https://github.com/piyushsuthar/github-readme-quotes)
+
+### Light
+> You don't need to add **?theme=light** parameter.
+
+[![readme Quotes](https://quotes-github-readme.vercel.app/api?type=vertical)](https://github.com/piyushsuthar/github-readme-quotes)
+
+### Dark
+> You need to add **?theme=dark** parameter.
+
+[![readme Quotes](https://quotes-github-readme.vercel.app/api?theme=dark)](https://github.com/piyushsuthar/github-readme-quotes)
 
 # Author 🤗
 
