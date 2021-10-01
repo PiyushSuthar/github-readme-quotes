@@ -24,6 +24,8 @@
   </a>
 </p>
 
+> A Huge shoutout to [Mini Ware](https://github.com/Mini-Ware) for his immense contribution to this project!
+
 # Features ✨
 - [Dynamic quotes in your GitHub Readme.](#Demo)
 
