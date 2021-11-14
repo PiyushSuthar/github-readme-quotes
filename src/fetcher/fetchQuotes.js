@@ -1,14 +1,13 @@
 const axios = require('axios').default
 
-// The API is currently down, see issue: https://github.com/skolakoda/programming-quotes-api/issues/37
 async function fetchQuotes() {
-    const response = await axios.get('https://programming-quotes-api.herokuapp.com/quotes/random/')
+    const response = await axios.get('https://programmingquotesapi.azurewebsites.net/quotes/random')
     const data = response.data
 
     let parsedData = parseData(data)
 
     // check if the quote is less than 150 chars and return
-    return parsedData.quote.length > 150 ? parsedData : fetchQuotes()
+    return parsedData.quote.length < 150 ? parsedData : fetchQuotes()
 }
 
 // Using JSON directly from GitHub Repo.
