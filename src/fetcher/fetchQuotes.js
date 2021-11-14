@@ -6,8 +6,8 @@ async function fetchQuotes() {
 
     let parsedData = parseData(data)
 
-    // check if the quote is less than 150 chars and return
-    return parsedData.quote.length < 150 ? parsedData : fetchQuotes()
+    // check if the quote is less than 220 chars and return
+    return parsedData.quote.length < 220 ? parsedData : fetchQuotes()
 }
 
 // Using JSON directly from GitHub Repo.
