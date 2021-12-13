@@ -1,7 +1,8 @@
 const axios = require('axios').default
 
 async function fetchQuotes() {
-    const response = await axios.get('https://programmingquotesapi.azurewebsites.net/quotes/random')
+//     const response = await axios.get('https://programmingquotesapi.azurewebsites.net/quotes/random')
+    const response = await axios.get('https://programming-quotes-api.herokuapp.com/Quotes/random')
     const data = response.data
 
     let parsedData = parseData(data)
