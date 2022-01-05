@@ -1,6 +1,5 @@
-const renderVertical = ({quote, author, color})=>{
-    
-    const renderedSVG = `<svg width="300" height="300" fill="none" xmlns="http://www.w3.org/2000/svg">
+const renderVertical = ({ quote, author, color }) => {
+  const renderedSVG = `<svg width="300" height="300" fill="none" xmlns="http://www.w3.org/2000/svg">
     <foreignObject width="100%" height="100%">
         <div xmlns="http://www.w3.org/1999/xhtml">
         <style>
@@ -51,8 +50,8 @@ const renderVertical = ({quote, author, color})=>{
     <h3>${quote}</h3>
     <p>- ${author}</p>
   </div>
-  </div></foreignObject></svg>`
-  return renderedSVG
-}
+  </div></foreignObject></svg>`;
+  return renderedSVG;
+};
 
-module.exports = renderVertical
+module.exports = renderVertical;

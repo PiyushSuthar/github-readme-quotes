@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --write \"./**/*.{js,json}\""
+  },
+  "dependencies": {
+    "axios": "^0.21.2"
   },
   "author": "Piyush Suthar",
   "license": "MIT",
-  "dependencies": {
-    "axios": "^0.21.2"
+  "devDependencies": {
+    "prettier": "^2.5.1"
   }
 }

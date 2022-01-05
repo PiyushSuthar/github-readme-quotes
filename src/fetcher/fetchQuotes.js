@@ -1,14 +1,16 @@
-const axios = require('axios').default
+const axios = require('axios').default;
 
 async function fetchQuotes() {
-//     const response = await axios.get('https://programmingquotesapi.azurewebsites.net/quotes/random')
-    const response = await axios.get('https://programming-quotes-api.herokuapp.com/Quotes/random')
-    const data = response.data
+  //     const response = await axios.get('https://programmingquotesapi.azurewebsites.net/quotes/random')
+  const response = await axios.get(
+    'https://programming-quotes-api.herokuapp.com/Quotes/random'
+  );
+  const data = response.data;
 
-    let parsedData = parseData(data)
+  let parsedData = parseData(data);
 
-    // check if the quote is less than 220 chars and return
-    return parsedData.quote.length < 220 ? parsedData : fetchQuotes()
+  // check if the quote is less than 220 chars and return
+  return parsedData.quote.length < 220 ? parsedData : fetchQuotes();
 }
 
 // Using JSON directly from GitHub Repo.
@@ -26,15 +28,15 @@ async function fetchQuotes() {
 // }
 
 /**
- * 
- * @param {*} data 
+ *
+ * @param {*} data
  * @returns {{quote:string; author:string;}}
  */
-const parseData = (data) => {
-    return {
-        quote: data.en,
-        author: data.author
-    }
-}
+const parseData = data => {
+  return {
+    quote: data.en,
+    author: data.author
+  };
+};
 
-module.exports = fetchQuotes
+module.exports = fetchQuotes;
