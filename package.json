@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "format": "prettier --write \"./**/*.{js,json}\""
+    "format": "prettier --write \"./**/*.{js,json,md}\""
   },
   "dependencies": {
     "axios": "^0.21.2"
