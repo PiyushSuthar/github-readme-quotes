@@ -1,7 +1,8 @@
 <p align="center">
   <img align="center" width="100" src="/logo.png" />
+
   <h1 align="center">Github Readme Quotes</h1>
-  <p align="center">Developer Quotes for your Github Readme.</p>
+  <h3 align="center">Developer Quotes for your Github Readme.</h3>
 </p>
 
 <!-- Badges -->
@@ -25,8 +26,6 @@
   <span> · </span>
   <a href="https://github.com/piyushsuthar/github-readme-quotes/issues" target="_blank">Report Bug</a>
 </p>
-
-> A Huge shoutout to [Mini Ware](https://github.com/Mini-Ware) for his immense contribution to this project!
 
 ## Features ✨
 
@@ -73,7 +72,7 @@ Copy the markdown below and paste it in your Github Readme.
 
 [![readme Quotes](https://quotes-github-readme.vercel.app/api?theme=dark)](https://github.com/piyushsuthar/github-readme-quotes)
 
-## Adding Soon! 🚧
+## Adding Soon 🚧
 
 - Customization Options
 - More features
@@ -86,9 +85,9 @@ Feel free to check [issues page](https://github.com/PiyushSuthar/github-readme-q
 
 ## Special Thanks ❤
 
-Inspired from [AnuragHazra/github-readme-stats](https://github.com/anuraghazra/github-readme-stats).
-
-[skolakoda/programming-quotes-api](https://github.com/skolakoda/programming-quotes-api) for Quotes API.
+- Inspired from [AnuragHazra/github-readme-stats](https://github.com/anuraghazra/github-readme-stats).
+- [skolakoda/programming-quotes-api](https://github.com/skolakoda/programming-quotes-api) for Quotes API.
+- And a huge shoutout to [Mini Ware](https://github.com/Mini-Ware) for his immense contribution to this project!
 
 ## Show your support 🌈
 
