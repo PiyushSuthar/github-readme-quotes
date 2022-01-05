@@ -12,6 +12,7 @@
   "author": "Piyush Suthar",
   "license": "MIT",
   "devDependencies": {
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "vercel": "^23.1.2"
   }
 }
