@@ -1,5 +1,5 @@
-const renderHorizontal = ({quote,author, color}) => {
-    const renderedSVG = `<svg width="600" height="auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+const renderHorizontal = ({ quote, author, color }) => {
+  const renderedSVG = `<svg width="600" height="auto" fill="none" xmlns="http://www.w3.org/2000/svg">
     <foreignObject width="100%" height="100%">
         <div xmlns="http://www.w3.org/1999/xhtml">
             <style>
@@ -50,8 +50,8 @@ const renderHorizontal = ({quote,author, color}) => {
         </div>
     </foreignObject>
 </svg>
-    `
-    return renderedSVG
-}
+    `;
+  return renderedSVG;
+};
 
-module.exports = renderHorizontal
+module.exports = renderHorizontal;
