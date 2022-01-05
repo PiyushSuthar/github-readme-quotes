@@ -46,6 +46,26 @@ Copy the markdown below and paste it in your Github Readme.
 | type    | vertical | horizontal, vertical                      |
 | theme   | light    | dark, radical, merko, gruvbox, tokyonight |
 
+## Installation and Development 🚀
+
+To get started with developing this app locally, here are the steps:
+
+Install the dependencies for the app using,
+
+```sh
+npm install
+# or
+yarn
+```
+
+And, then run the app using,
+
+```sh
+npx vercel dev
+# or
+yarn run vercel dev
+```
+
 ## Demo
 
 ### Vertical
