@@ -35,6 +35,12 @@ const themes = {
     author: '70a5fd',
     background: '1a1b27',
     symbol: 'bf91f3'
+  },
+  catppuccin: {
+    quote: '96CDFB',
+    author: 'D9E0EE',
+    background: '161320',
+    symbol: 'DDB6F2'
   }
 };
 
