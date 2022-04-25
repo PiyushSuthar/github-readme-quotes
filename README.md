@@ -92,6 +92,12 @@ yarn run vercel dev
 
 [![readme Quotes](https://quotes-github-readme.vercel.app/api?theme=dark)](https://github.com/piyushsuthar/github-readme-quotes)
 
+### Catppuccin
+
+> You need to add **?theme=catppuccin** parameter.
+
+[![readme Quotes](https://quotes-github-readme.vercel.app/api?theme=catppuccin)](https://github.com/piyushsuthar/github-readme-quotes)
+
 ## Adding Soon 🚧
 
 - Customization Options
