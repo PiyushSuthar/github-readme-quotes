@@ -19,5 +19,5 @@ module.exports = async (req, res) => {
   // Send the quote image response.
   res.setHeader('Content-Type', 'image/svg+xml');
   res.setHeader('Cache-Control', `public, max-age=600`);
-  res.send(renderSVG(data, type, theme, myquote));
+  res.send(renderSVG(data, type, theme));
 };
