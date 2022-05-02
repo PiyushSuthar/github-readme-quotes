@@ -41,7 +41,19 @@ const themes = {
     author: 'D9E0EE',
     background: '161320',
     symbol: 'DDB6F2'
-  }
+  },
+  algolia: {
+    quote: '00ADFE',
+    author: 'FEFEFE',
+    background: '050F2C',
+    symbol: '26BB85'
+  },
+  monokai: {
+    quote: 'EA1F6A',
+    author: 'CFCFC9',
+    background: '272822',
+    symbol: 'E18905'
+  },
 };
 
 const renderTheme = theme => {
