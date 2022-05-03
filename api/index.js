@@ -3,11 +3,18 @@ const renderSVG = require('../src/renderer/renderSVG');
 
 module.exports = async (req, res) => {
   // Get the queries.
-  const { type } = req.query;
-  const { theme } = req.query;
+  const { type, theme, myquote } = req.query;
 
   // Get the quotes.
-  let data = await fetchQuotes();
+  let data;
+  if (myquote) {
+    data = {
+      quote: myquote,
+      author: 'Me',
+    };
+  } else {
+    data = await fetchQuotes();
+  }
 
   // Send the quote image response.
   res.setHeader('Content-Type', 'image/svg+xml');

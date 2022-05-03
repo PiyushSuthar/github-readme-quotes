@@ -30,6 +30,7 @@
 ## Features ✨
 
 - [Dynamic quotes in your GitHub Readme.](#Demo)
+- [Customize your own quote.](#Custom)
 
 ## Usage ⚡️
 
@@ -44,7 +45,8 @@ Copy the markdown below and paste it in your Github Readme.
 | Options | Default  | Available                                 |
 | ------- | -------- | ----------------------------------------- |
 | type    | vertical | horizontal, vertical                      |
-| theme   | light    | dark, radical, merko, gruvbox, tokyonight |
+| theme   | light    | dark, radical, merko, gruvbox, tokyonight, algolia, monokai |
+| myquote  | -    | Customize your quote              |
 
 ## Installation and Development 🚀
 
@@ -97,6 +99,24 @@ yarn run vercel dev
 > You need to add **?theme=catppuccin** parameter.
 
 [![readme Quotes](https://quotes-github-readme.vercel.app/api?theme=catppuccin)](https://github.com/piyushsuthar/github-readme-quotes)
+
+### Algolia
+
+> You need to add **?theme=algolia** parameter.
+
+[![readme Quotes](https://quotes-github-readme.vercel.app/api?theme=algolia)](https://github.com/piyushsuthar/github-readme-quotes)
+
+### Monokai
+
+> You need to add **?theme=monokai** parameter.
+
+[![readme Quotes](https://quotes-github-readme.vercel.app/api?theme=monokai)](https://github.com/piyushsuthar/github-readme-quotes)
+
+## Custom
+> You need to add **?myquote=Your Quote** parameter.
+> URL encode your quote.
+
+[![readme Quotes](https://quotes-github-readme.vercel.app/api?myquote=My%20Quote)](https://github.com/piyushsuthar/github-readme-quotes)
 
 ## Adding Soon 🚧
 
