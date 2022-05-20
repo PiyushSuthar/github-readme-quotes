@@ -45,7 +45,7 @@ Copy the markdown below and paste it in your Github Readme.
 | Options | Default  | Available                                 |
 | ------- | -------- | ----------------------------------------- |
 | type    | vertical | horizontal, vertical                      |
-| theme   | light    | dark, radical, merko, gruvbox, tokyonight, algolia, monokai |
+| theme   | light    | dark, chartreuse-dark, radical, merko, gruvbox, tokyonight, algolia, monokai |
 | myquote  | -    | Customize your quote              |
 
 ## Installation and Development 🚀
