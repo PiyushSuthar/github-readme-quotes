@@ -12,6 +12,12 @@ const themes = {
     background: '151515',
     symbol: '79ff97'
   },
+  "chartreuse-dark": {
+    quote: 'fff',
+    author: '7fff00',
+    background: '000',
+    symbol: '00AEFF'
+  },
   radical: {
     quote: 'a9fef7',
     author: 'fe428e',
