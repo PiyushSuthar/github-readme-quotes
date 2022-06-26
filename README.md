@@ -112,6 +112,12 @@ yarn run vercel dev
 
 [![readme Quotes](https://quotes-github-readme.vercel.app/api?theme=monokai)](https://github.com/piyushsuthar/github-readme-quotes)
 
+### Dracula
+
+> You need to add **?theme=dracula** parameter.
+
+[![readme Quotes](https://quotes-github-readme.vercel.app/api?theme=dracula)](https://github.com/piyushsuthar/github-readme-quotes)
+
 ## Custom
 > You need to add **?myquote=Your Quote** parameter.
 > URL encode your quote.
