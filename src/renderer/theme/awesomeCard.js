@@ -65,7 +65,7 @@ const themes = {
     author: '6272A4',
     background: '282A36',
     symbol: 'FF79c6'
-  },
+  }
 };
 
 const renderTheme = theme => {
