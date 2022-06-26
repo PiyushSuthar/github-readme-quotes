@@ -62,7 +62,7 @@ const themes = {
   },
   dracula: {
     quote: 'F8F8F2',
-    author: '50FA7B',
+    author: '6272A4',
     background: '282A36',
     symbol: 'FF79c6'
   },
