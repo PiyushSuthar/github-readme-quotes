@@ -45,7 +45,7 @@ Copy the markdown below and paste it in your Github Readme.
 | Options | Default  | Available                                 |
 | ------- | -------- | ----------------------------------------- |
 | type    | vertical | horizontal, vertical                      |
-| theme   | light    | dark, chartreuse-dark, radical, merko, gruvbox, tokyonight, algolia, monokai |
+| theme   | light    | dark, chartreuse-dark, radical, merko, gruvbox, tokyonight, algolia, monokai, dracula|
 | myquote  | -    | Customize your quote              |
 
 ## Installation and Development 🚀
@@ -111,6 +111,12 @@ yarn run vercel dev
 > You need to add **?theme=monokai** parameter.
 
 [![readme Quotes](https://quotes-github-readme.vercel.app/api?theme=monokai)](https://github.com/piyushsuthar/github-readme-quotes)
+
+### Dracula
+
+> You need to add **?theme=dracula** parameter.
+
+[![readme Quotes](https://quotes-github-readme.vercel.app/api?theme=dracula)](https://github.com/piyushsuthar/github-readme-quotes)
 
 ## Custom
 > You need to add **?myquote=Your Quote** parameter.

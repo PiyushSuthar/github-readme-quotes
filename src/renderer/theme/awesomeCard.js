@@ -60,6 +60,12 @@ const themes = {
     background: '272822',
     symbol: 'E18905'
   },
+  dracula: {
+    quote: 'F8F8F2',
+    author: '6272A4',
+    background: '282A36',
+    symbol: 'FF79c6'
+  },
 };
 
 const renderTheme = theme => {
