@@ -47,6 +47,7 @@ Copy the markdown below and paste it in your Github Readme.
 | type    | vertical | horizontal, vertical                      |
 | theme   | light    | dark, chartreuse-dark, radical, merko, gruvbox, tokyonight, algolia, monokai, dracula|
 | myquote  | -    | Customize your quote              |
+| author   | -    | The name of the quote's author    |
 
 ## Installation and Development 🚀
 
