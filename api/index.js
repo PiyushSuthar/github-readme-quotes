@@ -3,11 +3,16 @@ const renderSVG = require('../src/renderer/renderSVG');
 
 module.exports = async (req, res) => {
   // Get the queries.
-  const { type, theme, myquote } = req.query;
+  const { type, theme, myquote, author } = req.query;
 
   // Get the quotes.
   let data;
-  if (myquote) {
+  if (myquote && author) {
+    data = {
+      quote: myquote,
+      author: author,
+    };
+  } else if (myquote) {
     data = {
       quote: myquote,
       author: 'Me',
