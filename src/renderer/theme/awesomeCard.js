@@ -66,6 +66,12 @@ const themes = {
     background: '282A36',
     symbol: 'FF79c6'
   },
+  nord: {
+    quote: 'D8DEE9',
+    author: '4C566A',
+    background: '2E3440',
+    symbol: '88C0D0'
+  },
 };
 
 const renderTheme = theme => {
