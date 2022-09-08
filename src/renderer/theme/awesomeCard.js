@@ -42,11 +42,29 @@ const themes = {
     background: '1a1b27',
     symbol: 'bf91f3'
   },
-  catppuccin: {
-    quote: '96CDFB',
-    author: 'D9E0EE',
-    background: '161320',
-    symbol: 'DDB6F2'
+  catppuccin_latte: {
+    quote: '179299',
+    author: '4c4f69',
+    background: 'eff1f5',
+    symbol: '8839ef'
+  },
+  catppuccin_frappe: {
+    quote: '81c8be',
+    author: 'c6d0f5',
+    background: '303446',
+    symbol: 'ca9ee6'
+  },
+  catppuccin_macchiato: {
+    quote: '8bd5ca',
+    author: 'cad3f5',
+    background: '24273a',
+    symbol: 'c6a0f6'
+  },
+  catppuccin_mocha: {
+    quote: '94e2d5',
+    author: 'cdd6f4',
+    background: '1e1e2e',
+    symbol: 'cba6f7'
   },
   algolia: {
     quote: '00ADFE',

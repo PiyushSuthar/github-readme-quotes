@@ -42,12 +42,12 @@ Copy the markdown below and paste it in your Github Readme.
 
 ### Options
 
-| Options | Default  | Available                                 |
-| ------- | -------- | ----------------------------------------- |
-| type    | vertical | horizontal, vertical                      |
-| theme   | light    | dark, chartreuse-dark, radical, merko, gruvbox, tokyonight, algolia, monokai, dracula, nord|
-| myquote  | -    | Customize your quote              |
-| author   | -    | The name of the quote's author    |
+| Options | Default  | Available                                                                                   |
+| ------- | -------- | ------------------------------------------------------------------------------------------- |
+| type    | vertical | horizontal, vertical                                                                        |
+| theme   | light    | dark, chartreuse-dark, radical, merko, gruvbox, tokyonight, algolia, monokai, dracula, nord |
+| myquote | -        | Customize your quote                                                                        |
+| author  | -        | The name of the quote's author                                                              |
 
 ## Installation and Development 🚀
 
@@ -97,7 +97,14 @@ yarn run vercel dev
 
 ### Catppuccin
 
-> You need to add **?theme=catppuccin** parameter.
+> Variants:
+>
+> - Latte
+> - Frappe
+> - Macchiato
+> - Mocha
+
+> You need to add **?theme=catppuccin_\<variant>** parameter. The current example is the Mocha variant, to use it add **?theme=catppuccin_mocha**.
 
 [![readme Quotes](https://quotes-github-readme.vercel.app/api?theme=catppuccin)](https://github.com/piyushsuthar/github-readme-quotes)
 
@@ -126,6 +133,7 @@ yarn run vercel dev
 [![readme Quotes](https://quotes-github-readme.vercel.app/api?theme=nord)](https://github.com/piyushsuthar/github-readme-quotes)
 
 ## Custom
+
 > You need to add **?myquote=Your Quote** parameter.
 > URL encode your quote.
 
