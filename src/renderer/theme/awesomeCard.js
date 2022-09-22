@@ -95,7 +95,13 @@ const themes = {
     author: '4C566A',
     background: '2E3440',
     symbol: '88C0D0'
-  },
+  }, 
+  github: {
+    quote: 'FFFFFF',
+    author: '4C566A',
+    background: '0D1117',
+    symbol: '43C293'
+  }
 };
 
 const renderTheme = theme => {
