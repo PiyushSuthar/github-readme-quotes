@@ -134,10 +134,10 @@ yarn run vercel dev
 
 ## Custom
 
-> You need to add **?myquote=Your Quote** parameter.
+> You need to add **?myquote=Your-Quote&author=Author** parameter.
 > URL encode your quote.
 
-[![readme Quotes](https://quotes-github-readme.vercel.app/api?myquote=My%20Quote)](https://github.com/piyushsuthar/github-readme-quotes)
+[![readme Quotes](https://quotes-github-readme.vercel.app/api?myquote=My%20Quote&author=From%20Me)](https://github.com/piyushsuthar/github-readme-quotes)
 
 ## Adding Soon 🚧
 
