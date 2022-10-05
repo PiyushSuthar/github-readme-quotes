@@ -1,5 +1,5 @@
 <p align="center">
-  <img align="center" width="100" src="/logo.png" />
+  <img align="center" width="100" src="assets/logo.png" />
 
   <h1 align="center">Github Readme Quotes</h1>
   <h3 align="center">Developer Quotes for your Github Readme.</h3>
@@ -104,7 +104,7 @@ yarn run vercel dev
 > - Macchiato
 > - Mocha
 
-> You need to add **?theme=catppuccin_\<variant>** parameter. The current example is the Mocha variant, to use it add **?theme=catppuccin_mocha**.
+> You need to add **?theme=catppuccin\_\<variant>** parameter. The current example is the Mocha variant, to use it add **?theme=catppuccin_mocha**.
 
 [![readme Quotes](https://quotes-github-readme.vercel.app/api?theme=catppuccin)](https://github.com/piyushsuthar/github-readme-quotes)
 
