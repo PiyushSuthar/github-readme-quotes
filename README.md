@@ -29,8 +29,8 @@
 
 ## Features ✨
 
-- [Dynamic quotes in your GitHub Readme.](#Demo)
-- [Customize your own quote.](#Custom)
+- [Dynamic quotes in your GitHub README](#Usage)
+- [Customize your own quote](#Custom)
 
 ## Usage ⚡️
 
@@ -46,7 +46,7 @@ Copy the markdown below and paste it in your Github Readme.
 | ------- | -------- | ------------------------------------------------------------------------------------------- |
 | type    | vertical | horizontal, vertical                                                                        |
 | theme   | light    | dark, chartreuse-dark, radical, merko, gruvbox, tokyonight, algolia, monokai, dracula, nord |
-| myquote | -        | Customize your quote                                                                        |
+| quote   | -        | Customize your quote                                                                        |
 | author  | -        | The name of the quote's author                                                              |
 
 ## Installation and Development 🚀
@@ -56,20 +56,16 @@ To get started with developing this app locally, here are the steps:
 Install the dependencies for the app using,
 
 ```sh
-npm install
-# or
-yarn
+pnpm install
 ```
 
-And, then run the app using,
+And then run the app using:
 
 ```sh
 npx vercel dev
-# or
-yarn run vercel dev
 ```
 
-## Demo
+## Usage
 
 ### Vertical
 
@@ -134,15 +130,10 @@ yarn run vercel dev
 
 ## Custom
 
-> You need to add **?myquote=Your Quote** parameter.
+> You need to add **?quote=Your Quote** parameter.
 > URL encode your quote.
 
-[![readme Quotes](https://quotes-github-readme.vercel.app/api?myquote=My%20Quote)](https://github.com/piyushsuthar/github-readme-quotes)
-
-## Adding Soon 🚧
-
-- Customization Options
-- More features
+[![readme Quotes](https://quotes-github-readme.vercel.app/api?quote=My%20Quote)](https://github.com/piyushsuthar/github-readme-quotes)
 
 ## Contributing 🤝
 
@@ -169,4 +160,4 @@ Be sure to drop a 🌟 if you like the project!
 - Github: [@PiyushSthr](https://github.com/PiyushSthr)
 - LinkedIn: [@piyushsthr](https://linkedin.com/in/piyushsthr)
 
-<div align="center">Made by Piyush with ❤ and JavaScript.</div>
+<div align="center">Made by Piyush with ❤ and TypeScript</div>
