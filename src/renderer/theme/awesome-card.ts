@@ -1,5 +1,11 @@
-// Define themes.
-const themes = {
+export interface Theme {
+  quote: string;
+  author: string;
+  background: string;
+  symbol: string;
+}
+
+export const themes: Record<string, Theme> = {
   light: {
     quote: '333',
     author: '2f80ed',
@@ -12,7 +18,7 @@ const themes = {
     background: '151515',
     symbol: '79ff97'
   },
-  "chartreuse-dark": {
+  'chartreuse-dark': {
     quote: 'fff',
     author: '7fff00',
     background: '000',
@@ -95,7 +101,7 @@ const themes = {
     author: '4C566A',
     background: '2E3440',
     symbol: '88C0D0'
-  }, 
+  },
   github: {
     quote: 'FFFFFF',
     author: '4C566A',
@@ -104,14 +110,12 @@ const themes = {
   }
 };
 
-const renderTheme = theme => {
-  // Check if theme exists in the themes object.
+export const renderTheme = (theme: keyof typeof themes) => {
+  // Check if theme exists in the themes object
   if (themes[theme]) {
     return themes[theme];
   }
 
-  // Else, return the light theme.
+  // Else, return the light theme
   return themes.light;
 };
-
-module.exports = { renderTheme, themes };
