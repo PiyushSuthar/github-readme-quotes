@@ -2,7 +2,7 @@ import { renderTheme, themes } from './theme/awesome-card';
 import { renderHorizontal } from './type/horizontal-card';
 import { renderVertical } from './type/vertical-card';
 
-type CardType = 'vertical' | 'horizontal' | undefined;
+export type CardType = 'vertical' | 'horizontal' | undefined;
 
 export const renderSVG = (
   data: { quote: string; author: string },

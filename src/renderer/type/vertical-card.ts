@@ -25,7 +25,7 @@ export const renderVertical = ({ quote, author, color }: Props) => {
             width: 300px;
             height: 300px;
             background-color: #${color.background};
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Poppins, Arial, Helvetica, sans-serif;
             padding: 15px;
             display:flex;
             flex-direction: column;

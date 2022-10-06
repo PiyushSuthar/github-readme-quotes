@@ -21,7 +21,7 @@ export const renderHorizontal = ({ quote, author, color }: Props) => {
                   box-sizing: border-box;
                 }
                 .container {
-                  font-family: Arial, Helvetica, sans-serif;
+                  font-family: Poppins, Arial, Helvetica, sans-serif;
                   padding: 20px;
                   width: 600px;
                   background-color: #${color.background};
