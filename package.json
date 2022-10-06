@@ -11,9 +11,9 @@
   "author": "Piyush Suthar",
   "license": "MIT",
   "devDependencies": {
-    "@vercel/node": "^2.5.21",
+    "@vercel/node": "^2.5.22",
     "prettier": "^2.7.1",
     "typescript": "^4.8.4",
-    "vercel": "^28.4.6"
+    "vercel": "^28.4.8"
   }
 }

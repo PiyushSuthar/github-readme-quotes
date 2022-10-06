@@ -4,7 +4,7 @@ import { Theme } from '../theme/awesome-card';
 interface Props {
   quote: string;
   author: string;
-  color: Theme  ;
+  color: Theme;
 }
 
 export const renderHorizontal = ({ quote, author, color }: Props) => {

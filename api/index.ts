@@ -9,24 +9,24 @@ import type { CardType } from '../src/renderer/render-svg';
 interface ResponseQuery {
   type: CardType;
   theme: keyof typeof themes;
-  myquote: string;
+  quote: string;
   author: string;
 }
 
 const handler = async (req: VercelRequest, res: VercelResponse) => {
-  const { type, theme, myquote, author } = req.query as unknown as ResponseQuery;
+  const { type, theme, quote, author } = req.query as unknown as ResponseQuery;
 
   let data;
 
-  if (myquote && author) {
+  if (quote && author) {
     data = {
-      quote: myquote,
-      author: author,
+      quote: quote,
+      author: author
     };
-  } else if (myquote) {
+  } else if (quote) {
     data = {
-      quote: myquote,
-      author: 'Me',
+      quote: quote,
+      author: 'Me'
     };
   } else {
     data = await fetchQuotes();
