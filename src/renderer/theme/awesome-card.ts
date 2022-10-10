@@ -114,6 +114,12 @@ export const themes: Record<string, Theme> = {
 	background: 'FFFFFF',
 	symbol: '24292E'
   },
+  moonlight: {
+		quote: 'F8F8F8',
+		author: 'FF757F',
+		background: '222436',
+		symbol: '599DFF'
+	},
 };
 
 export const renderTheme = (theme: keyof typeof themes) => {
