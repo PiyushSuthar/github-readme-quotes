@@ -109,11 +109,11 @@ export const themes: Record<string, Theme> = {
     symbol: '43C293'
   },
   graywhite: {
-		quote: '0A0A0A',
-		author: '0A0A0A',
-		background: 'F0F1F2',
-		symbol: '0A0A0A'
-	},
+	quote: '24292E',
+	author: '24292E"',
+	background: 'FFFFFF',
+	symbol: '24292E'
+  },
   moonlight: {
 		quote: 'F8F8F8',
 		author: 'FF757F',
