@@ -109,17 +109,17 @@ export const themes: Record<string, Theme> = {
     symbol: '43C293'
   },
   graywhite: {
-	quote: '24292E',
-	author: '24292E"',
-	background: 'FFFFFF',
-	symbol: '24292E'
+    quote: '24292E',
+    author: '24292E"',
+    background: 'FFFFFF',
+    symbol: '24292E'
   },
   moonlight: {
-		quote: 'F8F8F8',
-		author: 'FF757F',
-		background: '222436',
-		symbol: '599DFF'
-	},
+    quote: 'F8F8F8',
+    author: 'FF757F',
+    background: '222436',
+    symbol: '599DFF'
+  }
 };
 
 export const renderTheme = (theme: keyof typeof themes) => {

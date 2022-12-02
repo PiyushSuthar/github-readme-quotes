@@ -17,16 +17,28 @@ const parseData = (data: ParseDataParams) => {
   };
 };
 
+// Recursively find a random quote of correct length.
+const randomQuote = (data: ParseDataParams[]): ParseDataParams => {
+  let randQuote = data[Math.floor(Math.random() * data.length)];
+  return randQuote.en.length < 220 ? randQuote : randomQuote(data);
+};
+
 export async function fetchQuotes(): Promise<ParseDataReturn> {
   // NOTE: Heroku has no more free tier. Time for new API?
+  // const response = await axios.get(
+  //   'https://programming-quotes-api.herokuapp.com/Quotes/random'
+  // );
+  // Well it did stop haha.
+
   const response = await axios.get(
-    'https://programming-quotes-api.herokuapp.com/Quotes/random'
+    'https://github.com/skolakoda/programming-quotes-api/raw/master/Data/quotes.json'
   );
+
   const data = response.data;
 
-  // Parse the data returned from the API.
-  let parsedData = parseData(data);
+  // Get a random Quote.
+  let randQuote = randomQuote(data);
 
-  // Check if the quote is less than 220 chars, if so, return the quote
-  return parsedData.quote.length < 220 ? parsedData : fetchQuotes();
+  // Parse the data and return it.
+  return parseData(randQuote);
 }
