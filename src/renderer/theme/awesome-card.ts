@@ -123,7 +123,7 @@ export const themes: Record<string, Theme> = {
   transparent: {
     quote: '2F81F7',
     author: '417E87',
-    background: '222436',
+    background: 'transparent',
     symbol: '26BB85'
   }
 };
