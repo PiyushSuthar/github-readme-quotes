@@ -56,7 +56,7 @@ To get started with developing this app locally, here are the steps:
 Install the dependencies for the app using,
 
 ```sh
-pnpm install
+npm install
 ```
 
 And then run the app using:

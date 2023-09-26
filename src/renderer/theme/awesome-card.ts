@@ -117,8 +117,14 @@ export const themes: Record<string, Theme> = {
   moonlight: {
     quote: 'F8F8F8',
     author: 'FF757F',
-    background: '222436',
+    background: '00FFFFFF',
     symbol: '599DFF'
+  },
+  transparent: {
+    quote: '2F81F7',
+    author: '417E87',
+    background: 'transparent',
+    symbol: '26BB85'
   }
 };
 
