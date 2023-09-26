@@ -119,6 +119,12 @@ export const themes: Record<string, Theme> = {
     author: 'FF757F',
     background: '222436',
     symbol: '599DFF'
+  },
+  transparent: {
+    quote: '2F81F7',
+    author: '417E87',
+    background: '222436',
+    symbol: '26BB85'
   }
 };
 
