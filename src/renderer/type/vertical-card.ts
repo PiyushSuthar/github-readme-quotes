@@ -1,6 +1,5 @@
 import { poppinsFontSVG } from '../constants';
-
-import type { Theme } from '../theme/awesome-card';
+import { Theme, themes } from '../theme/awesome-card';
 
 interface Props {
   quote: string;
@@ -24,7 +23,6 @@ export const renderVertical = ({ quote, author, color }: Props) => {
           .container {
             width: 300px;
             height: 300px;
-            background-color: #${color.background};
             font-family: Poppins, Arial, Helvetica, sans-serif;
             padding: 15px;
             display:flex;
@@ -37,11 +35,9 @@ export const renderVertical = ({ quote, author, color }: Props) => {
           }
           .container h3::before {
             content: open-quote;
-            color: #${color.symbol};
           }
           .container h3::after {
             content: close-quote;
-            color: #${color.symbol};
           }
           .container h3::before, .container h3::after {
             font-size: 50px;
@@ -51,12 +47,57 @@ export const renderVertical = ({ quote, author, color }: Props) => {
           }
           .container h3 {
             margin-bottom: 15px;
-            color: #${color.quote};
           }
           .container p {
             font-style: italic;
-            color: #${color.author};
           }
+          
+          /* Default light theme */
+          .container {
+            background-color: #${themes.default.background};
+          }
+          .container h3 {
+            color: #${themes.default.quote};
+          }
+          .container h3::before, .container h3::after {
+            color: #${themes.default.symbol};
+          }
+          .container p {
+            color: #${themes.default.author};
+          }
+      
+          /* Default dark theme - iff dark mode detected in system settings, overriding default light theme */
+          @media (prefers-color-scheme: dark) {
+            .container {
+              background-color: #${themes.defaultDarkModeSupport.background};
+            }
+            .container h3 {
+              color: #${themes.defaultDarkModeSupport.quote};
+            }
+            .container h3::before, .container h3::after {
+              color: #${themes.defaultDarkModeSupport.symbol};
+            }
+            .container p {
+              color: #${themes.defaultDarkModeSupport.author};
+            }
+          }
+      
+          /* Default light/dark mode theme override for any custom theme */
+          ${JSON.stringify(color) !== JSON.stringify(themes.default) &&
+            JSON.stringify(color) !== JSON.stringify(themes.defaultDarkModeSupport) ?
+          ` .container {
+              background-color: #${color.background};
+            }
+            .container h3 {
+              color: #${color.quote};
+            }
+            .container h3::before, .container h3::after {
+              color: #${color.symbol};
+            }
+            .container p {
+              color: #${color.author};
+            }
+          ` : ''}
         </style>
         <div class="container">
           <h3>${quote}</h3>
