@@ -119,6 +119,12 @@ export const themes: Record<string, Theme> = {
     author: 'FF757F',
     background: '222436',
     symbol: '599DFF'
+  },
+  hackerman: {
+    quote: '00B3D6',
+    author: '00B3D6',
+    background: '000000',
+    symbol: '0B3D6'
   }
 };
 
