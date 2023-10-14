@@ -6,13 +6,13 @@ export interface Theme {
 }
 
 export const themes: Record<string, Theme> = {
-  light: {
+  default: {
     quote: '333',
     author: '2f80ed',
     background: 'fffefe',
     symbol: '4c71f2'
   },
-  dark: {
+  defaultDarkModeSupport: {
     quote: '9f9f9f',
     author: 'fff',
     background: '151515',
@@ -123,11 +123,11 @@ export const themes: Record<string, Theme> = {
 };
 
 export const renderTheme = (theme: keyof typeof themes) => {
-  // Check if theme exists in the themes object
-  if (themes[theme]) {
+  // Check if theme exists in the themes object and is neither default light nor dark mode theme
+  if (themes[theme] && theme !== 'light' && theme !== 'dark') {
     return themes[theme];
   }
 
-  // Else, return the light theme
-  return themes.light;
+  // Else, return the default (light) theme with dark mode support
+  return themes.default;
 };
