@@ -7,7 +7,8 @@ export type CardType = 'vertical' | 'horizontal' | undefined;
 export const renderSVG = (
   data: { quote: string; author: string },
   type: CardType,
-  theme: keyof typeof themes
+  theme: keyof typeof themes,
+  border: boolean
 ) => {
   const { quote, author } = data;
 
@@ -17,10 +18,10 @@ export const renderSVG = (
 
   switch (type) {
     case 'vertical':
-      return renderVertical({ quote, author, color });
+      return renderVertical({ quote, author, color, border });
     case 'horizontal':
-      return renderHorizontal({ quote, author, color });
+      return renderHorizontal({ quote, author, color, border });
     default:
-      return renderVertical({ quote, author, color });
+      return renderVertical({ quote, author, color, border });
   }
 };
