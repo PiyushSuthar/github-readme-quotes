@@ -5,9 +5,10 @@ interface Props {
   quote: string;
   author: string;
   color: Theme;
+  border: boolean;
 }
 
-export const renderHorizontal = ({ quote, author, color }: Props) => {
+export const renderHorizontal = ({ quote, author, color, border }: Props) => {
   const renderedSVG = `
   <svg width="600" height="auto" fill="none" xmlns="http://www.w3.org/2000/svg">
     <foreignObject width="100%" height="100%">
@@ -24,7 +25,7 @@ export const renderHorizontal = ({ quote, author, color }: Props) => {
                   font-family: Poppins, Arial, Helvetica, sans-serif;
                   padding: 20px;
                   width: 600px;
-                  border: 1px solid rgba(0, 0, 0, 0.2);
+                  border: ${border ? "3px solid #"+themes.default.symbol : "1px solid rgba(0, 0, 0, 0.2)"};
                   border-radius: 10px;
                 }
                 .container h3 {
@@ -66,6 +67,7 @@ export const renderHorizontal = ({ quote, author, color }: Props) => {
                 @media (prefers-color-scheme: dark) {
                   .container {
                     background-color: #${themes.defaultDarkModeSupport.background};
+				  	border: ${border ? "3px solid #"+themes.defaultDarkModeSupport.symbol : "1px solid rgba(0, 0, 0, 0.2)"};
                   }
                   .container h3 {
                     color: #${themes.defaultDarkModeSupport.quote};
@@ -83,6 +85,7 @@ export const renderHorizontal = ({ quote, author, color }: Props) => {
                   JSON.stringify(color) !== JSON.stringify(themes.defaultDarkModeSupport) ? 
                 ` .container {
                     background-color: #${color.background};
+					border: ${border ? "3px solid #"+color.symbol : "1px solid rgba(0, 0, 0, 0.2)"};
                   }
                   .container h3 {
                     color: #${color.quote};

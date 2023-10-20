@@ -11,10 +11,11 @@ interface ResponseQuery {
   theme: keyof typeof themes;
   quote: string;
   author: string;
+  border: boolean;
 }
 
 const handler = async (req: VercelRequest, res: VercelResponse) => {
-  const { type, theme, quote, author } = req.query as unknown as ResponseQuery;
+  const { type, theme, quote, author, border } = req.query as unknown as ResponseQuery;
 
   let data;
 
@@ -35,7 +36,7 @@ const handler = async (req: VercelRequest, res: VercelResponse) => {
   // Send the quote image response.
   res.setHeader('Content-Type', 'image/svg+xml');
   res.setHeader('Cache-Control', `public, max-age=600`);
-  res.send(renderSVG(data, type, theme));
+  res.send(renderSVG(data, type, theme, border));
 };
 
 export default handler;

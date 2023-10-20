@@ -124,7 +124,7 @@ export const themes: Record<string, Theme> = {
     quote: '00B3D6',
     author: '00B3D6',
     background: '000000',
-    symbol: '0B3D6'
+    symbol: '00B3D6'
   }
 };
 
