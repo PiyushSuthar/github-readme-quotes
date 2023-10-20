@@ -48,6 +48,7 @@ Copy the markdown below and paste it in your Github Readme.
 | theme   | light    | dark, chartreuse-dark, radical, merko, gruvbox, tokyonight, algolia, monokai, dracula, nord |
 | quote   | -        | Customize your quote                                                                        |
 | author  | -        | The name of the quote's author                                                              |
+| border  | false    | true, false                                                                                 |
 
 ## Installation and Development 🚀
 
@@ -78,6 +79,12 @@ npx vercel dev
 > You need to add **?type=horizontal** parameter.
 
 [![readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal)](https://github.com/piyushsuthar/github-readme-quotes)
+
+### Border
+
+> You need to add **?border=true** parameter.
+
+[![readme Quotes](https://quotes-github-readme.vercel.app/api?border=true)](https://github.com/piyushsuthar/github-readme-quotes)
 
 ### Light
 
