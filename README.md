@@ -40,6 +40,11 @@ Copy the markdown below and paste it in your Github Readme.
 [![Readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)](https://github.com/piyushsuthar/github-readme-quotes)
 ```
 
+Copy the markdown below and paste it in your Github Readme for Cyber Security Quotes.
+```md
+[![Readme Cyber Quotes](https://github-readme-cyber-quotes.vercel.app/api?type=horizontal&theme=dark)](https://github.com/hackelite01/github-readme-cyber-quotes)
+```
+
 ### Options
 
 | Options | Default  | Available                                                                                   |
