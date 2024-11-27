@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 interface ParseDataParams {
-  en: string;
+  text: string;
   author: string;
 }
 
@@ -10,33 +10,43 @@ interface ParseDataReturn {
   author: string;
 }
 
-const parseData = (data: ParseDataParams) => {
+const parseData = (data: ParseDataParams): ParseDataReturn => {
   return {
-    quote: data.en,
+    quote: data.text,
     author: data.author
   };
 };
 
 // Recursively find a random quote of correct length.
 const randomQuote = (data: ParseDataParams[]): ParseDataParams => {
-  let randQuote = data[Math.floor(Math.random() * data.length)];
-  return randQuote.en.length < 220 ? randQuote : randomQuote(data);
+  // Filter out invalid entries.
+  const validQuotes = data.filter(quote => quote && typeof quote.text === 'string');
+
+  // If no valid quotes exist, throw an error.
+  if (validQuotes.length === 0) {
+    throw new Error('No valid quotes found in the data.');
+  }
+
+  // Get a random quote.
+  let randQuote = validQuotes[Math.floor(Math.random() * validQuotes.length)];
+
+  // Check length and recurse if necessary.
+  return randQuote.text.length < 220 ? randQuote : randomQuote(validQuotes);
 };
 
 export async function fetchQuotes(): Promise<ParseDataReturn> {
-  // NOTE: Heroku has no more free tier. Time for new API?
-  // const response = await axios.get(
-  //   'https://programming-quotes-api.herokuapp.com/Quotes/random'
-  // );
-  // Well it did stop haha.
-
   const response = await axios.get(
-    'https://github.com/skolakoda/programming-quotes-api/raw/master/Data/quotes.json'
+    'https://github.com/mudroljub/programming-quotes-api/raw/master/data/quotes.json'
   );
 
-  const data = response.data;
+  const data: ParseDataParams[] = response.data;
 
-  // Get a random Quote.
+  // Validate the fetched data.
+  if (!Array.isArray(data)) {
+    throw new Error('Fetched data is not an array.');
+  }
+
+  // Get a random quote.
   let randQuote = randomQuote(data);
 
   // Parse the data and return it.
