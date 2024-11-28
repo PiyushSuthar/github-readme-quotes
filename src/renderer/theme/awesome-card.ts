@@ -129,19 +129,19 @@ export const themes: Record<string, Theme> = {
   shadow_red: {
     quote: '9A0000',
     author: '9A0000',
-    background: 'fffefe',
+    background: '151515',
     symbol: '4F0000'
   },
   shadow_green: {
       quote: '007A00',
       author: '007A00',
-      background: 'fffefe',
+      background: '151515',
       symbol: '003D00'
   },
   shadow_blue: {
       quote: '00779A',
       author: '00779A',
-      background: 'fffefe',
+      background: '151515',
       symbol: '004490'
   }
 };
