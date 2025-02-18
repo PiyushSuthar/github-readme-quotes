@@ -42,13 +42,14 @@ Copy the markdown below and paste it in your Github Readme.
 
 ### Options
 
-| Options | Default  | Available                                                                                   |
-| ------- | -------- | ------------------------------------------------------------------------------------------- |
-| type    | vertical | horizontal, vertical                                                                        |
-| theme   | light    | dark, chartreuse-dark, radical, merko, gruvbox, tokyonight, algolia, monokai, dracula, nord |
-| quote   | -        | Customize your quote                                                                        |
-| author  | -        | The name of the quote's author                                                              |
-| border  | false    | true, false                                                                                 |
+| Options | Default                                         | Available                                                                                   |
+| ------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| type    | vertical                                        | horizontal, vertical                                                                        |
+| theme   | light (auto-adjusts to dark if preferred)       | light, dark, chartreuse-dark, radical, merko, gruvbox, tokyonight, algolia, monokai, dracula, nord |
+| quote   | -                                               | Customize your quote                                                                        |
+| author  | -                                               | The name of the quote's author                                                              |
+| border  | false                                           | true, false                                                                                 |
+
 
 ## Installation and Development 🚀
 
@@ -86,9 +87,13 @@ npx vercel dev
 
 [![readme Quotes](https://quotes-github-readme.vercel.app/api?border=true)](https://github.com/piyushsuthar/github-readme-quotes)
 
+### Theme
+
+> The default theme will be light if a user is using light mode and dark themed if they are using dark mode.
+
 ### Light
 
-> You don't need to add **?theme=light** parameter.
+> You need to add **?theme=light** parameter.
 
 [![readme Quotes](https://quotes-github-readme.vercel.app/api?type=vertical)](https://github.com/piyushsuthar/github-readme-quotes)
 
