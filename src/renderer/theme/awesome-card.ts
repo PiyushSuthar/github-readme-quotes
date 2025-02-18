@@ -12,6 +12,18 @@ export const themes: Record<string, Theme> = {
     background: 'fffefe',
     symbol: '4c71f2'
   },
+  light: {
+    quote: '333',
+    author: '2f80ed',
+    background: 'fffefe',
+    symbol: '4c71f2'
+  },
+  dark: {
+    quote: '9f9f9f',
+    author: 'fff',
+    background: '151515',
+    symbol: '79ff97'
+  },
   defaultDarkModeSupport: {
     quote: '9f9f9f',
     author: 'fff',
@@ -110,7 +122,7 @@ export const themes: Record<string, Theme> = {
   },
   graywhite: {
     quote: '24292E',
-    author: '24292E"',
+    author: '24292E',
     background: 'FFFFFF',
     symbol: '24292E'
   },
@@ -133,25 +145,84 @@ export const themes: Record<string, Theme> = {
     symbol: '4F0000'
   },
   shadow_green: {
-      quote: '007A00',
-      author: '007A00',
-      background: '151515',
-      symbol: '003D00'
+    quote: '007A00',
+    author: '007A00',
+    background: '151515',
+    symbol: '003D00'
   },
   shadow_blue: {
-      quote: '00779A',
-      author: '00779A',
-      background: '151515',
-      symbol: '004490'
+    quote: '00779A',
+    author: '00779A',
+    background: '151515',
+    symbol: '004490'
   }
 };
 
-export const renderTheme = (theme: keyof typeof themes) => {
-  // Check if theme exists in the themes object and is neither default light nor dark mode theme
-  if (themes[theme] && theme !== 'light' && theme !== 'dark') {
-    return themes[theme];
-  }
-
-  // Else, return the default (light) theme with dark mode support
-  return themes.default;
+export const renderTheme = (theme?: string): Theme | null => {
+  if (theme === 'light') return themes.default;
+  if (theme === 'dark') return themes.defaultDarkModeSupport;
+  if (theme && themes[theme]) return themes[theme];
+  
+  // Get the corresponding theme or return null
+  // If null, the default styling will be used
+  return null;
 };
+
+
+
+// Gets dynamic styles for the quote
+export const getThemeStyles = (color : Theme | null, border: boolean) : string => {
+  // If there is a matching theme, use its styles
+  if (color) {
+    return `
+      .container {
+        background-color: #${color.background};
+        border: ${border ? "3px solid #"+color.symbol : "1px solid rgba(0, 0, 0, 0.2)"};
+      }
+      .container h3 {
+        color: #${color.quote};
+      }
+      .container h3::before, .container h3::after {
+        color: #${color.symbol};
+      }
+      .container p {
+        color: #${color.author};
+      }
+    `;
+  }
+  // If there is no theme explicitly provided, render dark/light mode
+  // based on user's color preferences.
+  return `
+    /* Default light theme */
+    .container {
+      background-color: #${themes.default.background};
+      border: ${border ? "3px solid #"+themes.default.symbol : "1px solid rgba(0, 0, 0, 0.2)"};
+    }
+    .container h3 {
+      color: #${themes.default.quote};
+    }
+    .container h3::before, .container h3::after {
+      color: #${themes.default.symbol};
+    }
+    .container p {
+      color: #${themes.default.author};
+    }
+    
+    /* Override for dark mode based on system settings */
+    @media (prefers-color-scheme: dark) {
+      .container {
+        background-color: #${themes.defaultDarkModeSupport.background};
+        border: ${border ? "3px solid #"+themes.defaultDarkModeSupport.symbol : "1px solid rgba(0, 0, 0, 0.2)"};
+      }
+      .container h3 {
+        color: #${themes.defaultDarkModeSupport.quote};
+      }
+      .container h3::before, .container h3::after {
+        color: #${themes.defaultDarkModeSupport.symbol};
+      }
+      .container p {
+        color: #${themes.defaultDarkModeSupport.author};
+      }
+    }
+  `;
+}
