@@ -42,13 +42,43 @@ Copy the markdown below and paste it in your Github Readme.
 
 ### Options
 
-| Options | Default  | Available                                                                                   |
+| Options | Default  | Description                                                                                 |
 | ------- | -------- | ------------------------------------------------------------------------------------------- |
-| type    | vertical | horizontal, vertical                                                                        |
-| theme   | light    | dark, chartreuse-dark, radical, merko, gruvbox, tokyonight, algolia, monokai, dracula, nord |
+| type    | vertical | Available: horizontal, vertical                                                             |
+| theme   | light    | [Available themes](#themes)                                                                 |
 | quote   | -        | Customize your quote                                                                        |
 | author  | -        | The name of the quote's author                                                              |
-| border  | false    | true, false                                                                                 |
+| border  | false    | Available: true, false                                                                      |
+
+<details id="themes">
+<summary>Themes</summary>
+
+- algolia
+- catppuccin
+- catppuccin_frappe
+- catppuccin_latte
+- catppuccin_macchiato
+- catppuccin_mocha
+- chartreuse-dark
+- dark
+- dracula
+- github
+- github_dark
+- graywhite
+- gruvbox
+- hackerman
+- light
+- merko
+- monokai
+- moonlight
+- nord
+- radical
+- shadow_blue
+- shadow_green
+- shadow_red
+- tokyonight
+
+</details>
 
 ## Installation and Development 🚀
 
@@ -137,10 +167,33 @@ npx vercel dev
 
 ## Custom
 
+### Custom Quotes
+
 > You need to add **?quote=Your Quote** parameter.
 > URL encode your quote.
 
 [![readme Quotes](https://quotes-github-readme.vercel.app/api?quote=My%20Quote)](https://github.com/piyushsuthar/github-readme-quotes)
+
+### Custom Colors
+
+You can now customize colors directly via query parameters:
+
+- `quoteColor`: Color for the quote text (hex code without #)
+- `authorColor`: Color for the author text (hex code without #)
+- `backgroundColor`: Color for the background (hex code without #)
+- `symbolColor`: Color for the quote symbols (hex code without #)
+
+Example:
+```md
+[![Readme Quotes](https://quotes-github-readme.vercel.app/api?quoteColor=ff0000&authorColor=00ff00&backgroundColor=0000ff&symbolColor=ffff00)](https://github.com/piyushsuthar/github-readme-quotes)
+```
+
+You can combine these parameters with a theme to override specific colors:
+```md
+[![Readme Quotes](https://quotes-github-readme.vercel.app/api?theme=dark&quoteColor=ff0000)](https://github.com/piyushsuthar/github-readme-quotes)
+```
+
+This will use the dark theme but override the quote color with red.
 
 ## Contributing 🤝
 

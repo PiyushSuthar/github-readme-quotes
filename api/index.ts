@@ -12,10 +12,25 @@ interface ResponseQuery {
   quote: string;
   author: string;
   border: boolean;
+  // Custom color parameters
+  quoteColor?: string;
+  authorColor?: string;
+  backgroundColor?: string;
+  symbolColor?: string;
 }
 
 const handler = async (req: VercelRequest, res: VercelResponse) => {
-  const { type, theme, quote, author, border } = req.query as unknown as ResponseQuery;
+  const { 
+    type, 
+    theme, 
+    quote, 
+    author, 
+    border,
+    quoteColor,
+    authorColor,
+    backgroundColor,
+    symbolColor
+  } = req.query as unknown as ResponseQuery;
 
   let data;
 
@@ -33,10 +48,18 @@ const handler = async (req: VercelRequest, res: VercelResponse) => {
     data = await fetchQuotes();
   }
 
+  // Custom colors object
+  const customColors = {
+    quote: quoteColor,
+    author: authorColor,
+    background: backgroundColor,
+    symbol: symbolColor
+  };
+
   // Send the quote image response.
   res.setHeader('Content-Type', 'image/svg+xml');
   res.setHeader('Cache-Control', `public, max-age=600`);
-  res.send(renderSVG(data, type, theme, border));
+  res.send(renderSVG(data, type, theme, border, customColors));
 };
 
 export default handler;

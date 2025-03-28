@@ -5,6 +5,13 @@ export interface Theme {
   symbol: string;
 }
 
+export interface CustomColors {
+  quote?: string;
+  author?: string;
+  background?: string;
+  symbol?: string;
+}
+
 export const themes: Record<string, Theme> = {
   default: {
     quote: '333',
@@ -108,6 +115,12 @@ export const themes: Record<string, Theme> = {
     background: '0D1117',
     symbol: '43C293'
   },
+  github_dark: {
+    quote: "C3D1D9",
+    author: "58A6FF",
+    background: "0D1117",
+    symbol: "1F6FEB",
+  },
   graywhite: {
     quote: '24292E',
     author: '24292E"',
@@ -146,12 +159,26 @@ export const themes: Record<string, Theme> = {
   }
 };
 
-export const renderTheme = (theme: keyof typeof themes) => {
-  // Check if theme exists in the themes object and is neither default light nor dark mode theme
+export const renderTheme = (theme: keyof typeof themes, customColors?: CustomColors) => {
+  // Get base theme - check if theme exists in the themes object and is neither default light nor dark mode theme
+  let baseTheme: Theme;
   if (themes[theme] && theme !== 'light' && theme !== 'dark') {
-    return themes[theme];
+    baseTheme = themes[theme];
+  } else {
+    // Else, return the default (light) theme with dark mode support
+    baseTheme = themes.default;
   }
 
-  // Else, return the default (light) theme with dark mode support
-  return themes.default;
+  // If no custom colors are provided, return the base theme
+  if (!customColors) {
+    return baseTheme;
+  }
+
+  // Create a custom theme by overriding base theme with any provided custom colors
+  return {
+    quote: customColors.quote || baseTheme.quote,
+    author: customColors.author || baseTheme.author,
+    background: customColors.background || baseTheme.background,
+    symbol: customColors.symbol || baseTheme.symbol
+  };
 };
