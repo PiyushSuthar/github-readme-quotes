@@ -17,7 +17,7 @@ jobs:
         fetch-depth: 0
 
     - name: Make the script file executable
-      run: chmod +x update-authors.sh
+      run: chmod +x ./scripts/update-authors.sh
 
     - name: Run script to update authors data
       run: ./scripts/update-authors.sh
