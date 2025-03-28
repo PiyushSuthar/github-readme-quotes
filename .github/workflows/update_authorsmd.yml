@@ -2,7 +2,7 @@ name: Update AUTHORS.md
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, master ]
 
 permissions:
   contents: write
