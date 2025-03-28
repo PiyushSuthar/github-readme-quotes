@@ -2,7 +2,7 @@ name: Update AUTHORS.md
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main, master ]
 
 permissions:
   contents: write
@@ -11,20 +11,16 @@ jobs:
   update-authors:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: ./scripts
-
     steps:
     - uses: actions/checkout@v4.2.2
       with:
         fetch-depth: 0
-	
+
     - name: Make the script file executable
       run: chmod +x update-authors.sh
 
     - name: Run script to update authors data
-      run: update-authors.sh
+      run: ./scripts/update-authors.sh
 
     - name: Commit and push changes
       run: |
