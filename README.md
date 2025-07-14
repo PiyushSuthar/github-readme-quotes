@@ -23,7 +23,7 @@
 <!-- Links -->
 <p align="center">
   <a href="https://quotes-github-readme.vercel.app/api" target="_blank">View Demo</a>
-  <span> · </span>
+  <span· </span>
   <a href="https://github.com/piyushsuthar/github-readme-quotes/issues" target="_blank">Report Bug</a>
 </p>
 
@@ -42,14 +42,44 @@ Copy the markdown below and paste it in your Github Readme.
 
 ### Options
 
-| Options | Default                                         | Available                                                                                   |
-| ------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| type    | vertical                                        | horizontal, vertical                                                                        |
-| theme   | light (auto-adjusts to dark if preferred)       | light, dark, chartreuse-dark, radical, merko, gruvbox, tokyonight, algolia, monokai, dracula, nord |
-| quote   | -                                               | Customize your quote                                                                        |
-| author  | -                                               | The name of the quote's author                                                              |
-| border  | false                                           | true, false                                                                                 |
+| Options | Default  | Description                                                                                 |
+| ------- | -------- | ------------------------------------------------------------------------------------------- |
+| type    | vertical | Available: horizontal, vertical                                                             |
+| theme   | light    | [Available themes](#themes)                                                                 |
+| quote   | -        | Customize your quote                                                                        |
+| author  | -        | The name of the quote's author                                                              |
+| border  | false    | Available: true, false                                                                      |
 
+<details id="themes">
+<summary>Themes</summary>
+
+- light
+- dark
+- algolia
+- catppuccin
+- catppuccin_frappe
+- catppuccin_latte
+- catppuccin_macchiato
+- catppuccin_mocha
+- chartreuse-dark
+- dracula
+- github
+- github_dark
+- github_blue
+- graywhite
+- gruvbox
+- hackerman
+- merko
+- monokai
+- moonlight
+- nord
+- radical
+- shadow_blue
+- shadow_green
+- shadow_red
+- tokyonight
+
+</details>
 
 ## Installation and Development 🚀
 
@@ -67,23 +97,17 @@ And then run the app using:
 npx vercel dev
 ```
 
-## Usage
-
-### Vertical
-
-> You don't need to add **?type=vertical** parameter.
-
-[![readme Quotes](https://quotes-github-readme.vercel.app/api?type=vertical)](https://github.com/piyushsuthar/github-readme-quotes)
+## Customization
 
 ### Horizontal
 
-> You need to add **?type=horizontal** parameter.
+Add the **?type=horizontal** parameter.
 
 [![readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal)](https://github.com/piyushsuthar/github-readme-quotes)
 
 ### Border
 
-> You need to add **?border=true** parameter.
+Add the **?border=true** parameter.
 
 [![readme Quotes](https://quotes-github-readme.vercel.app/api?border=true)](https://github.com/piyushsuthar/github-readme-quotes)
 
@@ -95,57 +119,54 @@ npx vercel dev
 
 > You need to add **?theme=light** parameter.
 
-[![readme Quotes](https://quotes-github-readme.vercel.app/api?type=vertical)](https://github.com/piyushsuthar/github-readme-quotes)
+dark
 
-### Dark
+[![readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)](https://github.com/piyushsuthar/github-readme-quotes)
 
-> You need to add **?theme=dark** parameter.
+catppuccin_mocha
 
-[![readme Quotes](https://quotes-github-readme.vercel.app/api?theme=dark)](https://github.com/piyushsuthar/github-readme-quotes)
+[![readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=catppuccin_mocha)](https://github.com/piyushsuthar/github-readme-quotes)
 
-### Catppuccin
+tokyonight
 
-> Variants:
->
-> - Latte
-> - Frappe
-> - Macchiato
-> - Mocha
+[![readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)](https://github.com/piyushsuthar/github-readme-quotes)
 
-> You need to add **?theme=catppuccin\_\<variant>** parameter. The current example is the Mocha variant, to use it add **?theme=catppuccin_mocha**.
+monokai
 
-[![readme Quotes](https://quotes-github-readme.vercel.app/api?theme=catppuccin)](https://github.com/piyushsuthar/github-readme-quotes)
+[![readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=monokai)](https://github.com/piyushsuthar/github-readme-quotes)
 
-### Algolia
+github_dark
 
-> You need to add **?theme=algolia** parameter.
-
-[![readme Quotes](https://quotes-github-readme.vercel.app/api?theme=algolia)](https://github.com/piyushsuthar/github-readme-quotes)
-
-### Monokai
-
-> You need to add **?theme=monokai** parameter.
-
-[![readme Quotes](https://quotes-github-readme.vercel.app/api?theme=monokai)](https://github.com/piyushsuthar/github-readme-quotes)
-
-### Dracula
-
-> You need to add **?theme=dracula** parameter.
-
-[![readme Quotes](https://quotes-github-readme.vercel.app/api?theme=dracula)](https://github.com/piyushsuthar/github-readme-quotes)
-
-### Nord
-
-> You need to add **?theme=nord** parameter.
-
-[![readme Quotes](https://quotes-github-readme.vercel.app/api?theme=nord)](https://github.com/piyushsuthar/github-readme-quotes)
+[![readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=github_dark)](https://github.com/piyushsuthar/github-readme-quotes)
 
 ## Custom
 
-> You need to add **?quote=Your Quote** parameter.
-> URL encode your quote.
+### Custom Quotes
 
-[![readme Quotes](https://quotes-github-readme.vercel.app/api?quote=My%20Quote)](https://github.com/piyushsuthar/github-readme-quotes)
+Add the **?quote=Your Quote** parameter.
+You must [URL encode](https://en.wikipedia.org/wiki/Percent-encoding) your quote.
+
+[![readme Quotes](https://quotes-github-readme.vercel.app/api?quote=My%20Quote&type=horizontal)](https://github.com/piyushsuthar/github-readme-quotes)
+
+### Custom Colors
+
+You can also customize colors directly via query parameters:
+
+- `quoteColor`: Color for the quote text (hex code without #)
+- `authorColor`: Color for the author text (hex code without #)
+- `backgroundColor`: Color for the background (hex code without #)
+- `symbolColor`: Color for the quote symbols (hex code without #)
+
+Examples:
+
+1. `?quoteColor=ff0000&authorColor=00ff00&backgroundColor=0000ff&symbolColor=ffff00`
+
+[![Readme Quotes](https://quotes-github-readme.vercel.app/api?quoteColor=ff0000&authorColor=00ff00&backgroundColor=0000ff&symbolColor=ffff00&type=horizontal)](https://github.com/piyushsuthar/github-readme-quotes)
+
+
+2. `?theme=dark&quoteColor=ff0000` (This will use the dark theme but override the quote color with red.)
+
+[![Readme Quotes](https://quotes-github-readme.vercel.app/api?theme=dark&quoteColor=ff0000&type=horizontal)](https://github.com/piyushsuthar/github-readme-quotes)
 
 ## Contributing 🤝
 
