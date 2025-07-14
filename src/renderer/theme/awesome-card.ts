@@ -22,12 +22,13 @@ export const renderTheme = (theme: keyof typeof themes, customColors?: CustomCol
   if (themes[theme] && theme !== 'light' && theme !== 'dark') {
     baseTheme = themes[theme];
   } else if (theme == 'dark') {
-    baseTheme = themes.defaultdefaultDarkModeSupport;
+    baseTheme = themes.defaultDarkModeSupport;
   } else if (theme == 'light') {
     baseTheme = themes.default;
-  } else if (!customColors) {
-    return null;
   } else {
+    if (!customColors) {
+      return null;
+    }
     baseTheme = themes.default;
   }
 
