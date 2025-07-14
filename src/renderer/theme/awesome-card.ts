@@ -27,6 +27,8 @@ export const renderTheme = (theme: keyof typeof themes, customColors?: CustomCol
     baseTheme = themes.default;
   } else if (!customColors) {
     return null;
+  } else {
+    baseTheme = themes.default;
   }
 
   if (!customColors) {
