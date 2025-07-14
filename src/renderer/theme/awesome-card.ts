@@ -20,7 +20,7 @@ export const renderTheme = (theme: keyof typeof themes, customColors?: CustomCol
   let baseTheme: Theme;
 
   // If no theme, return null
-  if (theme == null) {
+  if (theme == null && customColors == null) {
     return null;
   }
   
