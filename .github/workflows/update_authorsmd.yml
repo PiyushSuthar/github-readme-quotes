@@ -1,0 +1,31 @@
+name: Update AUTHORS.md
+
+on:
+  push:
+    branches: [ main, master ]
+
+permissions:
+  contents: write
+
+jobs:
+  update-authors:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4.2.2
+      with:
+        fetch-depth: 0
+
+    - name: Make the script file executable
+      run: chmod +x ./scripts/update-authors.sh
+
+    - name: Run script to update authors data
+      run: ./scripts/update-authors.sh
+
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add .
+        git diff --quiet && git diff --staged --quiet || git commit -m "Autoupdate AUTHORS.md"
+        git push
