@@ -7,3 +7,6 @@ package-lock.json
 
 # Vercel.
 .vercel
+
+#package-lock
+package-lock.json

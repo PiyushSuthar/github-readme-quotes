@@ -111,8 +111,13 @@ Add the **?border=true** parameter.
 
 [![readme Quotes](https://quotes-github-readme.vercel.app/api?border=true)](https://github.com/piyushsuthar/github-readme-quotes)
 
+### Theme
 
-### Themes
+> The default theme will be light if a user is using light mode and dark themed if they are using dark mode.
+
+### Light
+
+> You need to add **?theme=light** parameter.
 
 dark
 
