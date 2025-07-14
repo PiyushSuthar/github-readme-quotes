@@ -19,18 +19,18 @@ export const themes: Record<string, Theme> = themesData;
 export const renderTheme = (theme: keyof typeof themes, customColors?: CustomColors): Theme | null => {
   let baseTheme: Theme;
 
+  // If no theme, return null
+  if (theme == null) {
+    return null;
+  }
+  
   if (themes[theme] && theme !== 'light' && theme !== 'dark') {
     baseTheme = themes[theme];
   } else if (theme == 'dark') {
     baseTheme = themes.defaultDarkModeSupport;
-  } else if (theme == 'light') {
-    baseTheme = themes.default;
   } else {
-    if (!customColors) {
-      return null;
-    }
     baseTheme = themes.default;
-  }
+  } 
 
   if (!customColors) {
     return baseTheme;
